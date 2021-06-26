@@ -69,8 +69,8 @@ export default {
 
     fetchSkillData: async function () {
       // Use dockerUrl in production
-      // const dockerUrl = "/skills"
-      const localUrl = "http://127.0.0.1:8000/skills";
+      // const dockerUrl = "@backend/skills" // For production
+      const localUrl = "http://127.0.0.1:8000/skills"; // for local development
       axios
         .get(localUrl)
         .then((values) => {

@@ -1,7 +1,7 @@
 version: "3"
 services:
   frontend:
-    image: burakhanaksoy/frontend:1.2
+    image: burakhanaksoy/frontend:1.0
     ports:
       - 8080:8080
   backend:

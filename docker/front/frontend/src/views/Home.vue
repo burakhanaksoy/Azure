@@ -20,7 +20,6 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 import ProgressBars from "@/components/ProgressBars.vue";
 import Spinner from "@/components/Spinner.vue";
-import axios from "axios";
 import { mapState } from "vuex";
 
 export default {
@@ -69,17 +68,20 @@ export default {
 
     fetchSkillData: async function () {
       // Use dockerUrl in production
-      // const dockerUrl = "/skills"
-      const localUrl = "http://127.0.0.1:8000/skills";
-      axios
-        .get(localUrl)
-        .then((values) => {
-          values.data.forEach((data) => {
-            this.technologies.push(data);
-            this.hideSpinner();
-          });
-        })
-        .catch(console.error);
+      // const dockerUrl = "@backend/skills" // For production
+      // const localUrl = "http://127.0.0.1:8000/skills"; // for local development
+      console.log("h");
+      this.technologies = [
+        { name: "Python", val: 60, variant: "good" },
+        { name: "Docker", val: 60, variant: "good" },
+        { name: "HTML", val: 70, variant: "good" },
+        { name: "CSS", val: 40, variant: "mid" },
+        { name: "Mongodb", val: 50, variant: "mid" },
+        { name: "Linux", val: 35, variant: "bad" },
+        { name: "Vue", val: 40, variant: "bad" },
+        { name: "JS", val: 30, variant: "bad" },
+      ];
+      this.hideSpinner();
     },
   },
 

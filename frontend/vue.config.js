@@ -7,4 +7,7 @@ module.exports = {
       enableInSFC: false,
     },
   },
+  devServer: {
+    disableHostCheck: true
+  }
 };
