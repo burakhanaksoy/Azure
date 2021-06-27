@@ -6,7 +6,8 @@
           <div id="nav">
             <router-link to="/">{{ this.home }}</router-link> |
             <router-link to="/about">{{ this.about }}</router-link> |
-            <router-link to="/git">{{ this.github }}</router-link>
+            <router-link to="/git">{{ this.github }}</router-link> |
+            <router-link to="/articles">{{ this.articles }}</router-link>
           </div>
         </div>
         <div id="lang-bar" class="col-0">
@@ -35,6 +36,7 @@ export default {
       home: this.$t("home"),
       about: this.$t("about"),
       github: this.$t("github"),
+      articles: this.$t("articles"),
     };
   },
   computed: {
@@ -57,6 +59,7 @@ export default {
       this.home = this.$t("home");
       this.about = this.$t("about");
       this.github = this.$t("github");
+      this.articles = this.$t("articles");
     },
   },
 };

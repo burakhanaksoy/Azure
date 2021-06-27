@@ -20,6 +20,7 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 import ProgressBars from "@/components/ProgressBars.vue";
 import Spinner from "@/components/Spinner.vue";
+// import axios from "axios";
 import { mapState } from "vuex";
 
 export default {
@@ -53,9 +54,6 @@ export default {
   methods: {
     changeView: function (val) {
       this.$i18n.locale = val;
-      this.home = this.$t("home");
-      this.about = this.$t("about");
-      this.github = this.$t("github");
     },
 
     showSpinner: function () {
@@ -70,17 +68,16 @@ export default {
       // Use dockerUrl in production
       // const dockerUrl = "@backend/skills" // For production
       // const localUrl = "http://127.0.0.1:8000/skills"; // for local development
-      console.log("h");
-      this.technologies = [
+      this.technologies.push(
         { name: "Python", val: 60, variant: "good" },
-        { name: "Docker", val: 60, variant: "good" },
-        { name: "HTML", val: 70, variant: "good" },
         { name: "CSS", val: 40, variant: "mid" },
+        { name: "HTML", val: 70, variant: "good" },
         { name: "Mongodb", val: 50, variant: "mid" },
         { name: "Linux", val: 35, variant: "bad" },
         { name: "Vue", val: 40, variant: "bad" },
-        { name: "JS", val: 30, variant: "bad" },
-      ];
+        { name: "JS", val: 30, variant: "bad" }
+      );
+
       this.hideSpinner();
     },
   },

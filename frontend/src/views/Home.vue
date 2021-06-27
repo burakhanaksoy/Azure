@@ -54,9 +54,6 @@ export default {
   methods: {
     changeView: function (val) {
       this.$i18n.locale = val;
-      this.home = this.$t("home");
-      this.about = this.$t("about");
-      this.github = this.$t("github");
     },
 
     showSpinner: function () {
