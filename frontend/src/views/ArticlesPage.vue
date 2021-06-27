@@ -65,6 +65,14 @@ export default {
             "In this article, we will take an extensive look at the OOP Design Principles.",
           img_source: require("../../utils/photos/design_principles.png"),
           button_text: "Start learning Design Principles!",
+        },
+        {
+          title: "Kubernetes",
+          href: "https://github.com/burakhanaksoy/Kubernetes-Study#readme",
+          card_text:
+            "In this article, we will take an extensive look at Kubernetes",
+          img_source: require("../../utils/photos/kubernetes.png"),
+          button_text: "Start learning Kubernetes!",
         }
       );
     },
