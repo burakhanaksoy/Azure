@@ -7,9 +7,10 @@
     </div>
     <div class="row">
       <div class="col">
-        <h3>{{ techStack }}</h3>
+        <!-- <h3>{{ techStack }}</h3> -->
         <bars :techList="technologies" />
         <spinner :isActive="spinnerActive" />
+        <h4 class="signature">{{ this.signature }}</h4>
       </div>
     </div>
   </div>
@@ -33,7 +34,7 @@ export default {
   data: function () {
     return {
       technologies: [],
-      techStack: this.$t("techStack"),
+      signature: this.$t("signature"),
     };
   },
   computed: {
@@ -47,6 +48,7 @@ export default {
       if (val) {
         this.changeView(val);
         this.techStack = this.$t("techStack");
+        this.signature = this.$t("signature");
       }
     },
   },
@@ -99,4 +101,12 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+
+<style scoped>
+.signature {
+  font-weight: lighter;
+  color: rgb(255, 169, 64);
+  font-size: 19px;
+  margin-top: 1rem;
+}
+</style>

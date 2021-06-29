@@ -24,7 +24,7 @@
           <b-col md="10" offset-md="1">
             <b-card bg-variant="white" text-variant="black">
               <b-row no-gutters>
-                <b-col md="3">
+                <b-col md="4">
                   <b-card-img
                     :src="article.img_source"
                     alt="Image"
@@ -33,7 +33,7 @@
                   >
                   </b-card-img>
                 </b-col>
-                <b-col md="9">
+                <b-col md="8">
                   <h3>{{ article.title }}</h3>
                   <b-card-text>
                     {{ article.card_text }}

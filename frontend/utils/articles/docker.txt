@@ -1,6 +1,6 @@
 <p align="center">
   
-  <img width="450" height="350" src="https://user-images.githubusercontent.com/31994778/123071595-76f77100-d41d-11eb-8641-93f18c90d28c.png">
+  <img width="220" height="150" src="https://user-images.githubusercontent.com/31994778/123071595-76f77100-d41d-11eb-8641-93f18c90d28c.png">
   
 </p>
 
@@ -32,7 +32,7 @@ In these cases, Docker comes to the rescue.
 <b>With Docker, we can package our application with whatever configuration, files it needs and use it any machine we want</b>
 
 <p align="center">
-  <img width="350" height="250" alt="Screen Shot 2021-06-23 at 12 33 10 PM" src="https://user-images.githubusercontent.com/31994778/123073806-6cd67200-d41f-11eb-8693-bb2a330f848e.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-23 at 12 33 10 PM" src="https://user-images.githubusercontent.com/31994778/123073806-6cd67200-d41f-11eb-8693-bb2a330f848e.png">
 
 </p>
 
@@ -41,7 +41,7 @@ As it is seen here, we can package our applications with docker so that it uses 
 <b>When you tell Docker to bring up your application with `docker-compose up`, Docker will automatically download and run these dependencies inside an isolated environment, called `Container`.</b>
 
 <p align="center">
-  <img width="500" alt="Screen Shot 2021-06-23 at 12 39 07 PM" src="https://user-images.githubusercontent.com/31994778/123074521-0c940000-d420-11eb-9efc-c9a2f9d5e54b.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-23 at 12 39 07 PM" src="https://user-images.githubusercontent.com/31994778/123074521-0c940000-d420-11eb-9efc-c9a2f9d5e54b.png">
 </p>
 
 <b>This is the beauty of Docker! This isolated environment allows multiple applications use different versions of software side by side.</b>
@@ -65,7 +65,7 @@ Regarding software development, we can run our applications in isolation inside 
 So, on a single physical machine, we can run two applications in isolation on two different virtual machines with each app has dependencies they need.
 
 <p align="center">
-<img width="500" alt="Screen Shot 2021-06-23 at 1 01 19 PM" src="https://user-images.githubusercontent.com/31994778/123077927-297e0280-d423-11eb-82fa-792b8c339edd.png">
+<img width="220" height="150" alt="Screen Shot 2021-06-23 at 1 01 19 PM" src="https://user-images.githubusercontent.com/31994778/123077927-297e0280-d423-11eb-82fa-792b8c339edd.png">
 </p>
 
 All these are running on the same machine but with different isolated environments. That's one of the benefits of virtual machines.

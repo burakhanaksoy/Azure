@@ -1,5 +1,5 @@
 <p align="center">
-<img width="400" height="200" src="https://user-images.githubusercontent.com/31994778/123542315-b7bef500-d751-11eb-8bf6-dd6c87a7fabb.png">
+<img width="220" height="150" src="https://user-images.githubusercontent.com/31994778/123542315-b7bef500-d751-11eb-8bf6-dd6c87a7fabb.png">
 </p>
 
 ---
@@ -19,7 +19,7 @@
  </p>
  
  <p align="center">
-  <img width="473" alt="Screen Shot 2021-06-27 at 2 30 27 PM" src="https://user-images.githubusercontent.com/31994778/123542831-56e4ec00-d754-11eb-8b3a-5923fbab33a3.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-27 at 2 30 27 PM" src="https://user-images.githubusercontent.com/31994778/123542831-56e4ec00-d754-11eb-8b3a-5923fbab33a3.png">
   </p>
   
   This means that K8s helps us manage applications that made up of 10s or 100s of containers.
@@ -30,7 +30,7 @@ Amongst switching from `monolithic` architectures to `microservices`, applicatio
 
 
 <p align="center">
-  <img width="550" alt="Screen Shot 2021-06-27 at 2 34 07 PM" src="https://user-images.githubusercontent.com/31994778/123542965-15a10c00-d755-11eb-86bf-a2218c442c38.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-27 at 2 34 07 PM" src="https://user-images.githubusercontent.com/31994778/123542965-15a10c00-d755-11eb-86bf-a2218c442c38.png">
   </p>
   
   <p align="center">
@@ -52,7 +52,7 @@ Amongst switching from `monolithic` architectures to `microservices`, applicatio
 </p>
 
 <p align="center">
-<img width="550" height="350" alt="Screen Shot 2021-06-27 at 2 46 44 PM" src="https://user-images.githubusercontent.com/31994778/123543324-901e5b80-d756-11eb-8827-308fd1445836.png">
+<img width="220" height="150" alt="Screen Shot 2021-06-27 at 2 46 44 PM" src="https://user-images.githubusercontent.com/31994778/123543324-901e5b80-d756-11eb-8827-308fd1445836.png">
   </p>
 
 <b><i>"Kubernetes has tons of components, but for most of the time we are going to be working with just a handful of them."</b></i>
@@ -70,7 +70,7 @@ A pod is the smallest unit in K8s. <b>Pod is an abstraction over container.</b>
 What this means is that a pod creaters a running environment, another layer, over a, say Docker, container and it abstracts this container so that <b>you only have to deal with K8s, not the container.</b>
 
 <p align="center">
-  <img width="300" height="350" alt="Screen Shot 2021-06-27 at 3 10 28 PM" src="https://user-images.githubusercontent.com/31994778/123544050-1ee0a780-d75a-11eb-9f72-76ccc0d724ba.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-27 at 3 10 28 PM" src="https://user-images.githubusercontent.com/31994778/123544050-1ee0a780-d75a-11eb-9f72-76ccc0d724ba.png">
   </p>
 
 -> A pod is meant to run one application(container) inside of it.
@@ -78,13 +78,13 @@ What this means is that a pod creaters a running environment, another layer, ove
 -> In my website project, I have backend, frontend, db applications. With k8s, they all run inside pods. One pod for each, total => 3 pods.
 
 <p align="center">
-  <img width="300" height="350" alt="Screen Shot 2021-06-27 at 3 16 52 PM" src="https://user-images.githubusercontent.com/31994778/123544229-fdcc8680-d75a-11eb-925d-69fc78f8d912.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-27 at 3 16 52 PM" src="https://user-images.githubusercontent.com/31994778/123544229-fdcc8680-d75a-11eb-925d-69fc78f8d912.png">
   </p>
   
   <b>Kubernetes has its own virtual network and pods talk to each other using the IP addresses assigned to them inside this virtual network.</b>
   
   <p align="center">
-  <img width="300" height="350" alt="Screen Shot 2021-06-27 at 3 21 54 PM" src="https://user-images.githubusercontent.com/31994778/123544325-75021a80-d75b-11eb-8e91-83fced5101b4.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-27 at 3 21 54 PM" src="https://user-images.githubusercontent.com/31994778/123544325-75021a80-d75b-11eb-8e91-83fced5101b4.png">
   </p>
   
   When a pod dies out, kubernetes replaces it with another one, however, the IP address of the dead port changes on restart. This is bad since other pod won't be aware of the new IP address. To solve it, we have another component called `Service`.
@@ -96,7 +96,7 @@ What this means is that a pod creaters a running environment, another layer, ove
   <b><i>"Service is a component that provides a permanent IP address with pods. So each `pod` has its own `service`. However, Service and Pod are not the same thing so we should think Service as a gateway to a Pod that helps a Pod to obtain a permanent IP address. "</b></i>
   
   <p align="center">
-  <img width="300" height="300" alt="Screen Shot 2021-06-27 at 3 31 28 PM" src="https://user-images.githubusercontent.com/31994778/123544611-c959ca00-d75c-11eb-98ec-d33c7ff0c659.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-27 at 3 31 28 PM" src="https://user-images.githubusercontent.com/31994778/123544611-c959ca00-d75c-11eb-98ec-d33c7ff0c659.png">
   </p>
   
   1- Life cycle of a Pod and Service are not connected. This means `Service` will stay intact even if `Pod` dies out.
@@ -110,11 +110,11 @@ What this means is that a pod creaters a running environment, another layer, ove
   5- So, instead of `Service`, an external request first goes through `Ingress`, and `Ingress` does the forwarding to the `Service`.
 
 <p align="center">
-<img width="500" alt="Screen Shot 2021-06-27 at 3 41 18 PM" src="https://user-images.githubusercontent.com/31994778/123544888-22762d80-d75e-11eb-9c98-c59908f57142.png">
+<img width="220" height="150" alt="Screen Shot 2021-06-27 at 3 41 18 PM" src="https://user-images.githubusercontent.com/31994778/123544888-22762d80-d75e-11eb-9c98-c59908f57142.png">
   </p>
   
 <p align="center">
-  <img width="350" height="300" alt="Screen Shot 2021-06-27 at 3 43 07 PM" src="https://user-images.githubusercontent.com/31994778/123544955-71bc5e00-d75e-11eb-95c7-922fd129880f.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-27 at 3 43 07 PM" src="https://user-images.githubusercontent.com/31994778/123544955-71bc5e00-d75e-11eb-95c7-922fd129880f.png">
   </p>
   
   ---
@@ -157,7 +157,7 @@ Thanks to `ConfigMap`, we can easily solve this problem without having to do the
 <b>We just put/adjust the endpoint inside the `ConfigMap`, and our pod will know what to do with it.</b>
 
 <p align="center">
-  <img width="550" alt="Screen Shot 2021-06-27 at 4 37 12 PM" src="https://user-images.githubusercontent.com/31994778/123546616-01b1d600-d766-11eb-9371-47898c6ce93b.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-27 at 4 37 12 PM" src="https://user-images.githubusercontent.com/31994778/123546616-01b1d600-d766-11eb-9371-47898c6ce93b.png">
   </p>
 
 In other words, <b>A ConfigMap allows you to decouple environment-specific configuration from your container images, so that your applications are easily portable.</b>
@@ -171,7 +171,7 @@ In other words, <b>A ConfigMap allows you to decouple environment-specific confi
 <b>Both ConfigMap and Secret is connected to a pod.</b>
 
 <p align="center">
-<img width="550" alt="Screen Shot 2021-06-27 at 4 40 02 PM" src="https://user-images.githubusercontent.com/31994778/123546691-5d7c5f00-d766-11eb-93ca-9f6d720dc0d0.png">
+<img width="220" height="150" alt="Screen Shot 2021-06-27 at 4 40 02 PM" src="https://user-images.githubusercontent.com/31994778/123546691-5d7c5f00-d766-11eb-93ca-9f6d720dc0d0.png">
   </p>
   
   ---
@@ -183,7 +183,7 @@ In other words, <b>A ConfigMap allows you to decouple environment-specific confi
   <b><i>"K8s volumes attaches a physical hard-drive to a pod that's meant to be stateful. The storage can either be on local machine or a remote storage."</b></i>
   
   <p align="center">
-  <img width="550" alt="Screen Shot 2021-06-27 at 4 46 18 PM" src="https://user-images.githubusercontent.com/31994778/123546944-6883bf00-d767-11eb-8a87-008cb7915283.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-27 at 4 46 18 PM" src="https://user-images.githubusercontent.com/31994778/123546944-6883bf00-d767-11eb-8a87-008cb7915283.png">
   </p>
   
   ---
@@ -195,7 +195,7 @@ In other words, <b>A ConfigMap allows you to decouple environment-specific confi
   Let's say that everything is working fine. But what happens when one of our pods dies?
   
   <p align="center">
-  <img width="550" alt="Screen Shot 2021-06-27 at 5 03 14 PM" src="https://user-images.githubusercontent.com/31994778/123547467-94a03f80-d769-11eb-9064-3f301d2f680e.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-27 at 5 03 14 PM" src="https://user-images.githubusercontent.com/31994778/123547467-94a03f80-d769-11eb-9064-3f301d2f680e.png">
 
 </p>
   
@@ -218,7 +218,7 @@ In other words, <b>A ConfigMap allows you to decouple environment-specific confi
 <b>-`Deployment` is an abstraction on top of `Pods`.</b>
 
 <p align="center">
-  <img width="550" alt="Screen Shot 2021-06-27 at 5 10 22 PM" src="https://user-images.githubusercontent.com/31994778/123547730-98809180-d76a-11eb-84fe-928bfb853742.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-27 at 5 10 22 PM" src="https://user-images.githubusercontent.com/31994778/123547730-98809180-d76a-11eb-84fe-928bfb853742.png">
 
   </p>
   
@@ -227,7 +227,7 @@ In other words, <b>A ConfigMap allows you to decouple environment-specific confi
   Unfortunately, using `Deployment` is only for `Stateless` applications. In other words, if your application hold data(state), then it's better to use `Stateful Sets`. The reason why we can't use `Deployment` is because the replicas of the database would likely to have problem of data inconsistency, since they all share a common data resource.
   
   <p align="center">
-  <img width="550" alt="Screen Shot 2021-06-27 at 5 18 51 PM" src="https://user-images.githubusercontent.com/31994778/123548022-ca462800-d76b-11eb-9846-ede56e600b56.png">
+  <img width="220" height="150" alt="Screen Shot 2021-06-27 at 5 18 51 PM" src="https://user-images.githubusercontent.com/31994778/123548022-ca462800-d76b-11eb-9846-ede56e600b56.png">
 
   </p>
   
@@ -236,7 +236,7 @@ In other words, <b>A ConfigMap allows you to decouple environment-specific confi
 <b>Note that deploying db applications using stateful set is not easy. So it's common practice to host db applications outside k8s cluster and just have the stateless applications that replicate and scale with no problem inside of the k8s cluster.</b>
   
   <p align="center">
-  <img width="250" height="350" alt="Screen Shot 2021-06-27 at 4 55 47 PM" src="https://user-images.githubusercontent.com/31994778/123547205-8aca0c80-d768-11eb-973e-dde70a0e14b7.png">
+  <img width="220" height="300" alt="Screen Shot 2021-06-27 at 4 55 47 PM" src="https://user-images.githubusercontent.com/31994778/123547205-8aca0c80-d768-11eb-973e-dde70a0e14b7.png">
 </p>
 
 ---

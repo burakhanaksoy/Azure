@@ -66,7 +66,7 @@ export default {
           title: "Design Principles",
           href: "https://github.com/burakhanaksoy/Design_Principles#readme",
           card_text:
-            "In this article, we will take an extensive look at the OOP Design Principles.",
+            "We will take an extensive look at the OOP Design Principles.",
           img_source: require("../../utils/photos/design_principles.png"),
           button_text: "Start learning Design Principles!",
         },
