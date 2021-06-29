@@ -68,6 +68,15 @@ export default {
       // Use dockerUrl in production
       // const dockerUrl = "@backend/skills" // For production
       // const localUrl = "http://127.0.0.1:8000/skills"; // for local development
+      // axios
+      //   .get(localUrl)
+      //   .then((values) => {
+      //     values.data.forEach((data) => {
+      //       this.technologies.push(data);
+      //       this.hideSpinner();
+      //     });
+      //   })
+      //   .catch(console.error);
       this.technologies.push(
         { name: "Python", val: 60, variant: "good" },
         { name: "CSS", val: 40, variant: "mid" },
@@ -75,9 +84,9 @@ export default {
         { name: "Mongodb", val: 50, variant: "mid" },
         { name: "Linux", val: 35, variant: "bad" },
         { name: "Vue", val: 40, variant: "bad" },
-        { name: "JS", val: 30, variant: "bad" }
+        { name: "JS", val: 30, variant: "bad" },
+        { name: "Docker", val: 60, variant: "good" }
       );
-
       this.hideSpinner();
     },
   },

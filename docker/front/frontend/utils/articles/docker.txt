@@ -1,0 +1,98 @@
+<p align="center">
+  
+  <img width="450" height="350" src="https://user-images.githubusercontent.com/31994778/123071595-76f77100-d41d-11eb-8641-93f18c90d28c.png">
+  
+</p>
+
+<b>Table Of Contents</b> |
+------------ | 
+[What is Docker?](#first) 
+[VM vs Container](#vm-vs-cont)
+[Drawbacks of VMs](#vm-drawbacks)
+[Docker Architecture](#architecture)
+ 
+ <p id="first">
+ <h2>What is Docker?</h2>
+ </p>
+ 
+ <p>
+  <b><i>"Docker is a platform for building, running, and shipping applications in a consistent manner, so if your application run flawlessly in your development machine, it can run and function the same way in other machines."</b></i>
+ </p>
+
+If you have faced with the problem of smoothly running your application in a development machine, but not working in a different machine, this might be stemming from:
+
+1- `One or more files are missing`
+
+2- `Software version mismatch`
+
+3- `Different configuration settings, such as env variables and etc.`
+
+In these cases, Docker comes to the rescue.
+
+<b>With Docker, we can package our application with whatever configuration, files it needs and use it any machine we want</b>
+
+<p align="center">
+  <img width="350" height="250" alt="Screen Shot 2021-06-23 at 12 33 10 PM" src="https://user-images.githubusercontent.com/31994778/123073806-6cd67200-d41f-11eb-8693-bb2a330f848e.png">
+
+</p>
+
+As it is seen here, we can package our applications with docker so that it uses specific versions of technologies needed. This will cause every machine to be using the same versions.
+
+<b>When you tell Docker to bring up your application with `docker-compose up`, Docker will automatically download and run these dependencies inside an isolated environment, called `Container`.</b>
+
+<p align="center">
+  <img width="500" alt="Screen Shot 2021-06-23 at 12 39 07 PM" src="https://user-images.githubusercontent.com/31994778/123074521-0c940000-d420-11eb-9efc-c9a2f9d5e54b.png">
+</p>
+
+<b>This is the beauty of Docker! This isolated environment allows multiple applications use different versions of software side by side.</b>
+
+As you can see here, while one application uses Node version 14, the other one uses Node version 9, and they can run side by side on the same machine without messing up with each other.
+
+
+`Also, if we want to get rid of one application, i.e., we don't want to use it anymore, then we can erase that app and its dependencies with a single Docker command. This helps us not storing that application's dependencies in our machine, but instead in the docker container.
+`
+
+---
+
+<p id="vm-vs-cont">
+<h2>Virtual Machines vs Containers</h2>
+</p>
+
+<h3>Use of Virtual Machines</h3>
+
+Regarding software development, we can run our applications in isolation inside virtual machines.
+
+So, on a single physical machine, we can run two applications in isolation on two different virtual machines with each app has dependencies they need.
+
+<p align="center">
+<img width="500" alt="Screen Shot 2021-06-23 at 1 01 19 PM" src="https://user-images.githubusercontent.com/31994778/123077927-297e0280-d423-11eb-82fa-792b8c339edd.png">
+</p>
+
+All these are running on the same machine but with different isolated environments. That's one of the benefits of virtual machines.
+
+<p id="vm-drawbacks">
+<h3>Problems</h3>
+</p>
+
+Each virtual machine needs a copy of an OS that needs to be licensed, patched, and monitored.
+Slow to start, because the entire OS needs to be booted up, just like a physical computer.
+Resource intensive(Each VM runs with depending on physical resources such as RAM, HDD, CPU and etc.)
+So if you run multiple VMs in a single computer, the computer resources must be portioned between these VMs.
+This limits the number of VMs that we can run on a physical machine...
+Containers doesn't have this limitation..
+
+<h3>Containers</h3>
+
+ Allow running multiple apps in isolation
+ Lightweight(doesn't need a full OS)
+ All containers on a single machine share the OS of the host.
+ This means we need to license, patch, and monitor a single operating system.
+ Also, since the OS is dependent on the host, the container will start up pretty quickly.
+ Need less hardware resources.
+ This means in a host, we can run 10s and 100s of containers side by side.
+
+<p id="architecture">
+<h2>Docker Architecture</h2>
+</p>
+
+<b>You can continue this article on [my github page](https://github.com/burakhanaksoy/Docker-Study#readme).</b>

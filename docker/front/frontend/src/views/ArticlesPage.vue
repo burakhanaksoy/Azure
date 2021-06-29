@@ -52,6 +52,8 @@ export default {
       this.hideSpinner();
       this.posts.push(
         {
+          name: "Docker",
+          componentName: "docker",
           title: "Extensive Docker Study",
           href: "https://github.com/burakhanaksoy/Docker-Study#readme",
           card_text: "In this article, we will learn Docker together.!",
@@ -59,6 +61,8 @@ export default {
           button_text: "Start learning Docker!",
         },
         {
+          name: "Design Principles",
+          componentName: "designPrinciples",
           title: "Design Principles",
           href: "https://github.com/burakhanaksoy/Design_Principles#readme",
           card_text:
@@ -67,6 +71,8 @@ export default {
           button_text: "Start learning Design Principles!",
         },
         {
+          name: "Kubernetes",
+          componentName: "kubernetes",
           title: "Kubernetes",
           href: "https://github.com/burakhanaksoy/Kubernetes-Study#readme",
           card_text:
