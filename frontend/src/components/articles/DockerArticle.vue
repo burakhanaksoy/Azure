@@ -1,5 +1,11 @@
 <template>
-  <div class="markdown" v-html="markdown"></div>
+  <div class="mavonEditor">
+    <mavon-editor
+      :subfield="false"
+      :toolbarsFlag="false"
+      v-model="message"
+    />
+  </div>
 </template>
 
 <script>

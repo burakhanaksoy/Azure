@@ -1,15 +1,24 @@
 version: "3"
 services:
-  frontend:
-    image: burakhanaksoy/frontend:1.6
-    ports:
-      - 8080:8080
+  # frontend:
+    # build: ./docker/front
+    # networks:
+    #   - frontend
+    # image: burakhanaksoy/frontend:15.2
+    # ports:
+    #   - 8080:8080
   backend:
-    image: backend:1.0
+    image: burakhanaksoy/backend:15.1
+    # build: ./docker/back
+    # networks:
+    #   - frontend
+    #   - backend
     ports:
       - 8000:8000
   mongodb:
     image: mongo
+    # networks:
+    #   - backend
     ports:
       - 27017:27017
     environment:
@@ -19,6 +28,8 @@ services:
       - mongo-data:/data/db
   mongo-express:
     image: mongo-express
+    # networks:
+    #   - backend
     ports:
       - 8081:8081
     depends_on:
@@ -30,3 +41,11 @@ services:
 volumes:
   mongo-data:
     driver: local
+
+# networks:
+#   frontend:
+#     name: frontend
+#     driver: bridge
+#   backend:
+#     name: backend
+#     driver: bridge

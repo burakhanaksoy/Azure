@@ -1,7 +1,15 @@
 <template>
-  <div class="markdown" v-html="markdown"></div>
+  <!-- <div class="markdown" v-html="markdown"></div> -->
+  <div class="mavonEditor">
+    <mavon-editor
+      :toolbars="markdownOptions"
+      :defaultOpen="preview"
+      :subfield="false"
+      :toolbarsFlag="false"
+      v-model="message"
+    />
+  </div>
 </template>
-
 <script>
 import marked from "marked";
 import kubernetesText from "../../../utils/articles/kubernetes.txt";

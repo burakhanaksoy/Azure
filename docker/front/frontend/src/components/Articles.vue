@@ -9,6 +9,7 @@
         </div>
         <div class="row mt-4">
           <div class="col-md-12">
+            <spinner :isActive="spinnerActive" />
             <component :is="theComponent" :articleName="articleName" />
           </div>
         </div>
@@ -58,6 +59,8 @@
 import DockerArticle from "@/components/articles/DockerArticle.vue";
 import KubernetesArticle from "@/components/articles/KubernetesArticle.vue";
 import DesignPrinciplesArticle from "@/components/articles/DesignPrinciples.vue";
+import AlgorithmsArticle from "@/components/articles/AlgorithmsArticle.vue";
+import Spinner from "@/components/Spinner.vue";
 
 export default {
   name: "Articles",
@@ -65,6 +68,8 @@ export default {
     docker: DockerArticle,
     kubernetes: KubernetesArticle,
     designPrinciples: DesignPrinciplesArticle,
+    algorithms: AlgorithmsArticle,
+    spinner: Spinner,
   },
   props: {
     articleList: Array,
@@ -75,20 +80,31 @@ export default {
       componentIsActive: false,
       theComponent: "",
       articleName: "",
+      spinnerActive: false,
     };
   },
 
   methods: {
     openComponent: function (componentName, articleName) {
       this.componentIsActive = true;
-      this.theComponent = componentName;
-      this.articleName = articleName;
-      console.log(articleName);
+      this.showSpinner();
+      setTimeout(() => {
+        this.theComponent = componentName;
+        this.articleName = articleName;
+        this.hideSpinner();
+      }, 1500);
     },
     closeComponent: function () {
       this.componentIsActive = false;
       this.theComponent = "";
       this.articleName = "";
+    },
+    showSpinner: function () {
+      this.spinnerActive = true;
+    },
+
+    hideSpinner: function () {
+      this.spinnerActive = false;
     },
   },
 };

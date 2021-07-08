@@ -4,21 +4,22 @@ from mongo.db import DB
 
 app = FastAPI()
 
-# origins = [
-#     "http://localhost.tiangolo.com",
-#     "https://localhost.tiangolo.com",
-#     "http://localhost",
-#     "http://localhost:8080",
-#     "https://burakhanaksoy.azurewebsites.net"
-# ]
+origins = [
+    "http://localhost.tiangolo.com",
+    "https://localhost.tiangolo.com",
+    "http://localhost",
+    "http://localhost:8080",
+    "https://burakhanaksoy.azurewebsites.net",
+    "http://burakhanaksoy.azurewebsites.net"
+]
 
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=origins,
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 db_instance = DB()
 db = db_instance.get_db('my-db')

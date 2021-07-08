@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import marked from "marked";
-import dockerText from "../../../utils/articles/docker.txt";
+// import marked from "marked";
+import algorithmText from "../../../utils/articles/algorithms.txt";
 export default {
-  name: "DockerArticle",
+  name: "AlgorithmsArticle",
   components: {},
   props: {
     articleName: String,
@@ -24,7 +24,10 @@ export default {
   data: function () {
     return {
       goBackClicked: false,
-      message: dockerText,
+      message: algorithmText,
+      markdownOption: {
+        bold: true, // 粗体
+      },
     };
   },
 
@@ -37,9 +40,12 @@ export default {
   },
 
   computed: {
-    markdown: function () {
-      return marked(`${this.message}`);
-    },
+    // markdown: function () {
+    //   return marked(`${this.message}`);
+    // },
+    // handbook: function () {
+    //   return mavonEditor(`${this.message}`);
+    // },
   },
 };
 </script>

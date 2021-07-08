@@ -1,9 +1,6 @@
 <template>
-  <!-- <div class="markdown" v-html="markdown"></div> -->
   <div class="mavonEditor">
     <mavon-editor
-      :toolbars="markdownOptions"
-      :defaultOpen="preview"
       :subfield="false"
       :toolbarsFlag="false"
       v-model="message"
@@ -12,10 +9,10 @@
 </template>
 
 <script>
-import marked from "marked";
-import dockerText from "../../../utils/articles/docker.txt";
+// import marked from "marked";
+import algorithmText from "../../../utils/articles/algorithms.txt";
 export default {
-  name: "DockerArticle",
+  name: "AlgorithmsArticle",
   components: {},
   props: {
     articleName: String,
@@ -24,7 +21,7 @@ export default {
   data: function () {
     return {
       goBackClicked: false,
-      message: dockerText,
+      message: algorithmText,
     };
   },
 
@@ -37,9 +34,12 @@ export default {
   },
 
   computed: {
-    markdown: function () {
-      return marked(`${this.message}`);
-    },
+    // markdown: function () {
+    //   return marked(`${this.message}`);
+    // },
+    // handbook: function () {
+    //   return mavonEditor(`${this.message}`);
+    // },
   },
 };
 </script>

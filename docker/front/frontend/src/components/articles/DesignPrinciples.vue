@@ -1,9 +1,17 @@
 <template>
-  <div class="markdown" v-html="markdown"></div>
+  <!-- <div class="markdown" v-html="markdown"></div> -->
+  <div class="mavonEditor">
+    <mavon-editor
+      :toolbars="markdownOptions"
+      :defaultOpen="preview"
+      :subfield="false"
+      :toolbarsFlag="false"
+      v-model="message"
+    />
+  </div>
 </template>
 
 <script>
-import marked from "marked";
 import designPrinciplesText from "../../../utils/articles/design_principles.txt";
 export default {
   name: "DesignPrinciples",
@@ -28,9 +36,9 @@ export default {
   },
 
   computed: {
-    markdown: function () {
-      return marked(`${this.message}`);
-    },
+    // markdown: function () {
+    //   return marked(`${this.message}`);
+    // },
   },
 };
 </script>

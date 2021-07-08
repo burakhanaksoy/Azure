@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Python",
+    "val": 60,
+    "variant": "good"
+  },
+  {
+    "name": "CSS",
+    "val": 40,
+    "variant": "mid"
+  },
+  {
+    "name": "HTML",
+    "val": 70,
+    "variant": "good"
+  },
+  {
+    "name": "Mongodb",
+    "val": 50,
+    "variant": "mid"
+  },
+  {
+    "name": "Linux",
+    "val": 35,
+    "variant": "bad"
+  },
+  {
+    "name": "Vue",
+    "val": 40,
+    "variant": "bad"
+  },
+  {
+    "name": "JS",
+    "val": 30,
+    "variant": "bad"
+  },
+  {
+    "name": "Docker",
+    "val": 60,
+    "variant": "good"
+  }
+]

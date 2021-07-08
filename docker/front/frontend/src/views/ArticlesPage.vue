@@ -79,6 +79,16 @@ export default {
             "In this article, we will take an extensive look at Kubernetes",
           img_source: require("../../utils/photos/kubernetes.png"),
           button_text: "Start learning Kubernetes!",
+        },
+        {
+          name: "Algorithms",
+          componentName: "algorithms",
+          title: "Algorithms",
+          href: "https://github.com/burakhanaksoy/Algoritmalar#readme",
+          card_text:
+            "In this article, we will take an extensive look at some commong algorithms used in CS",
+          img_source: require("../../utils/photos/algorithms.jpeg"),
+          button_text: "Take a look!",
         }
       );
     },

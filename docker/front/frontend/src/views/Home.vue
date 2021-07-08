@@ -68,10 +68,11 @@ export default {
 
     fetchSkillData: async function () {
       // Use dockerUrl in production
-      // const dockerUrl = "@backend/skills" // For production
+      // const dockerUrl = "http://burakhan.azurewebsites.net/skills" // For production
+      // const dockerUrl = "http://172.16.26.2:8080/skills" // For production
       // const localUrl = "http://127.0.0.1:8000/skills"; // for local development
       // axios
-      //   .get(localUrl)
+      //   .get(dockerUrl)
       //   .then((values) => {
       //     values.data.forEach((data) => {
       //       this.technologies.push(data);
