@@ -1,12 +1,12 @@
 version: "3"
 services:
-  # frontend:
+  frontend:
     # build: ./docker/front
     # networks:
     #   - frontend
-    # image: burakhanaksoy/frontend:15.2
+    # image: burakhanaksoy/frontend:4.7
     # ports:
-    #   - 8080:8080
+      # - 8080:8080
   backend:
     image: burakhanaksoy/backend:15.1
     # build: ./docker/back

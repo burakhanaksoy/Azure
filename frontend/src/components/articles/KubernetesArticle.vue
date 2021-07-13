@@ -1,14 +1,14 @@
 <template>
   <div class="mavonEditor">
     <mavon-editor
-      :subfield="false"
+      defaultOpen="preview"
       :toolbarsFlag="false"
+      :subfield="false"
       v-model="message"
-    />
+    ></mavon-editor>
   </div>
 </template>
 <script>
-import marked from "marked";
 import kubernetesText from "../../../utils/articles/kubernetes.txt";
 export default {
   name: "KubernetesArticle",
@@ -31,14 +31,7 @@ export default {
       this.goBackClicked = true;
     },
   },
-
-  computed: {
-    markdown: function () {
-      return marked(`${this.message}`);
-    },
-  },
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

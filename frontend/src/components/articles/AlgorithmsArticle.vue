@@ -1,15 +1,15 @@
 <template>
   <div class="mavonEditor">
     <mavon-editor
-      :subfield="false"
+      defaultOpen="preview"
       :toolbarsFlag="false"
+      :subfield="false"
       v-model="message"
-    />
+    ></mavon-editor>
   </div>
 </template>
 
 <script>
-// import marked from "marked";
 import algorithmText from "../../../utils/articles/algorithms.txt";
 export default {
   name: "AlgorithmsArticle",
@@ -31,15 +31,6 @@ export default {
     goBack: function () {
       this.goBackClicked = true;
     },
-  },
-
-  computed: {
-    // markdown: function () {
-    //   return marked(`${this.message}`);
-    // },
-    // handbook: function () {
-    //   return mavonEditor(`${this.message}`);
-    // },
   },
 };
 </script>

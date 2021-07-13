@@ -1,15 +1,15 @@
 <template>
   <div class="mavonEditor">
     <mavon-editor
-      :subfield="false"
+      defaultOpen="preview"
       :toolbarsFlag="false"
+      :subfield="false"
       v-model="message"
-    />
+    ></mavon-editor>
   </div>
 </template>
 
 <script>
-import marked from "marked";
 import dockerText from "../../../utils/articles/docker.txt";
 export default {
   name: "DockerArticle",
@@ -30,12 +30,6 @@ export default {
   methods: {
     goBack: function () {
       this.goBackClicked = true;
-    },
-  },
-
-  computed: {
-    markdown: function () {
-      return marked(`${this.message}`);
     },
   },
 };

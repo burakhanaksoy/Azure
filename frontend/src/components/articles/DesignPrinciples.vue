@@ -1,10 +1,11 @@
 <template>
   <div class="mavonEditor">
     <mavon-editor
-      :subfield="false"
+      defaultOpen="preview"
       :toolbarsFlag="false"
+      :subfield="false"
       v-model="message"
-    />
+    ></mavon-editor>
   </div>
 </template>
 
@@ -30,12 +31,6 @@ export default {
     goBack: function () {
       this.goBackClicked = true;
     },
-  },
-
-  computed: {
-    // markdown: function () {
-    //   return marked(`${this.message}`);
-    // },
   },
 };
 </script>
