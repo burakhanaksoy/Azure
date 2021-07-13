@@ -98,7 +98,7 @@ export default {
     this.showSpinner();
     setTimeout(() => {
       this.fetchSkillData();
-    }, 1500);
+    }, 750);
   },
 };
 </script>

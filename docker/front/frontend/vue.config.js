@@ -19,6 +19,14 @@ module.exports = {
       .loader("raw-loader")
       .end();
   },
+  configureWebpack:{
+    optimization: {
+      splitChunks: {
+        minSize: 10000,
+        maxSize: 250000,
+      }
+    }
+  }
   // chainWebpack: (config) => {
   //   config.module
   //     .rule("vue")

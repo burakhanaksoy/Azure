@@ -1,0 +1,11 @@
+[
+    {
+        "name": "Docker",
+        "componentName": "docker",
+        "title": "Extensive Docker Study",
+        "href": "https://github.com/burakhanaksoy/Docker-Study#readme",
+        "card_text": "In this article, we will learn Docker together.!",
+        "img_source": require("../../utils/photos/docker.png"),
+        "button_text": "Start learning Docker!"
+    }
+]

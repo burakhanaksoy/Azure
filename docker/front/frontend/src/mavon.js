@@ -4,7 +4,7 @@ import "mavon-editor/dist/css/index.css";
 // use
 Vue.use(mavonEditor);
 export default new Vue({
-  el: "#main",
+  // el: "#main",
   data() {
     return { value: "" };
   },
